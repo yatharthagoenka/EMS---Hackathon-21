@@ -1,0 +1,51 @@
+
+<br>
+<a href="/events" style="margin-left: 75px;"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#77c9b5" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+</svg></a>
+
+<div class="postouter">
+    <div class="postcard">
+        
+        <div class="postform">
+    
+            <img src="<%= event.coverImagePath %>" style="width: 200px; height: 300px;border-radius: 10px;margin-top: 40px;margin-bottom: 20px;">
+            <div style="margin-left: 20px;">
+                <h2 class="posthead"><%= event.title %></h2>
+        
+                <div>
+                    <input type="text" name="username" value="<%= event.username %>" placeholder="Username : Autofill" readonly>
+                </div><br>
+        
+                <div style="display:flex; flex-direction:row; justify-content:space-between;margin-left: 10px;">
+        
+                    <div>
+                        <select name="tag">
+                            <option label="<%= event.tag.name %>" selected></option>
+                        </select>
+                    </div>
+        
+                    <div style="margin-left: 20px;">
+                        <input type="date" name="publishDate" id="postdate" readonly value="<%= event.timeline %>">
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <textarea placeholder="Description" name="description" readonly><%= event.description %></textarea>
+                </div>
+                <br>
+
+                <div style="display: flex; flex-direction: row;margin-left: 60px;margin-top: 5px;">
+                    <div style="margin-right: 50px;"><%- include('../partials/deleteForm',{url:`/events/${event.id}`}) %> </div>
+                    <div><a href="/events/<%= event.id %>/edit"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#4ecf82" class="bi bi-filter-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM3.5 5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zM5 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+                    </svg></a></div>
+
+                </div>
+        
+            </div>
+        
+        </div>
+
+    </div>
+</div>

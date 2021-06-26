@@ -1,0 +1,80 @@
+
+<div class="mainpageinnercontainer">
+<!-- <a href="/tags/new">New Tag</a> -->
+
+<div>
+    <!-- <h2>Search Tags</h2> -->
+    <div style="display: flex;flex-direction: row;">
+    <form action="/reviews" method="GET">
+        <div class="tagsearch">
+        <input id="search" type="search" placeholder="Search Reviews" name="username" value="<%= searchOptions.username %>" autofocus /></div>
+    </form>
+    <a href="/reviews/new"><svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 40px; margin-top: 7px;" width="46" height="46" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+      </svg></a>
+    </div>
+</div>
+
+<br><br>
+
+<!-- <div class="tagsinner" style="width: 1400px;">
+    <div class="taglist" style="margin-left: -10px; margin-right: 30px;">
+    <% var m=2; %>
+    <% reviews.forEach(review=>{ %> 
+        <%m=m+1;%>
+        <div class="main-container">
+            <div class="tagcard-container" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-offset="-40">
+                <div class="tagcard tagcard-<%=m%>">
+                    <form method="POST" action="/reviews/<%= review.id %>?_method=DELETE">
+                        <button type="submit" class="b1">×</button>
+                    </form>
+                    <h2 class="tagcard__title" style="font-size: 15px;margin-top: -20px;"><%= review.username %></h2>
+                    <h2 class="tagcard__title" style="font-size: 20px;margin-top: -45px;"><%= review.rating %> / <%= review.keyword %></h2>
+                    <div class="applydiv">
+                        <span>
+                            <span class="tagtext"><p class="tagcard__apply"><a href="/reviews/<%= review.id %>/edit">Edit</a></p></span>
+                            <span class="tagicon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: -23px;margin-top: 7px;" width="16" height="22" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% if(m==5){m=0;} %>
+    <% }) %> 
+    </div>
+
+</div>
+
+</div> -->
+<div class="revindexcards"  data-aos="zoom-in-up" data-aos-duration="1000" data-aos-offset="-40">
+    <% reviews.forEach(review=>{ %> 
+                <a href="/reviews/<%= review.id %>/edit" class="data-card">
+                <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                    <div><form style="margin-left: -20px;margin-top: -20px;margin-bottom: 30px;" method="POST" action="/reviews/<%= review.id %>?_method=DELETE">
+                        <button type="submit" class="revdelb">×</button>
+                    </form></div>
+                    <div><h4 style="font-size: 11px;margin-right: -30px;margin-top: -20px;"><%= review.username %></h4></div>
+                </div>
+                <h3><%= review.rating %>  <svg  xmlns="http://www.w3.org/2000/svg"  width="40" height="40" fill="#ffe642" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg></h3>
+                <h4><%= review.keyword %></h4>
+                <p><%= review.comment %></p>
+                <span class="link-text">
+                    View
+                    <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+            </svg>
+                </span>
+                </a>
+    <% }) %> 
+
+</div>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
