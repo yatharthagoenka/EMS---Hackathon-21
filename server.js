@@ -17,6 +17,7 @@ const indexRouter = require('./routes/index')
 const tagRouter = require('./routes/tags')
 const eventRouter = require('./routes/events')
 const reviewRouter = require('./routes/reviews') 
+const contactRouter = require('./routes/contact') 
 
 
 app.set('view engine', 'ejs')
@@ -111,6 +112,7 @@ app.use('/index', indexRouter)
 app.use('/tags', tagRouter)
 app.use('/events', eventRouter)
 app.use('/reviews',reviewRouter)
+app.use('/contact',contactRouter)
 
 // function isLoggedIn(req,res,next) {
 //     if(req.isAuthenticated()){

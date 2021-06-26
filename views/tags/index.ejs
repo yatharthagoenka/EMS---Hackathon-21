@@ -1,65 +1,35 @@
 
-<div class="tagsindexcontainer">
-<div>
-    <div style="display: flex;flex-direction: row;">
-    <form action="/tags" method="GET">
-        <div class="tagsearch">
-        <input id="search" type="search" placeholder="Search Tags" name="name" value="<%= searchOptions.name %>" autofocus /></div>
-        <!-- <label>Name</label>
-        <input type="text" name="name" value="<%= searchOptions.name %>">
-        <button type="submit">Search</button> -->
-    </form>
-    <a href="/tags/new"><svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 40px; margin-top: 7px;" width="46" height="46" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-      </svg></a>
+
+<div id="tagsbg">
+
+    <div id="tagindextop">
+
+        <h1 id="taghead">CATEGORIES</h1>
+        <p>Keep track of how your events are being organized</p>
+        <p><a href="/tags/new" id="newtaglink">Trying something new? Add a Tag!</a></p>
+        
     </div>
-</div>
 
-<br><br>
-
-<div class="tagsinner">
-    <div class="taglist" style="margin-left: 30px; margin-right: 30px;">
-    <% var m=2; %>
+  <div class="tagscontainer">
     <% tags.forEach(tag=>{ %> 
-        <%m=m+1;%>
-        <div class="main-container">
-            <div class="tagcard-container" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-offset="-40">
-                <div class="tagcard tagcard-<%=m%>">
-                    <!-- <div class="tagcard__icon"><i class="fas fa-bolt"></i></div> -->
-                    <!-- <p class="tagcard__exit"><i class="fas fa-times"></i></p> -->
-                    <form method="POST" action="/tags/<%= tag.id %>?_method=DELETE">
-                        <button type="submit" class="b1">×</button>
-                    </form>
-                    <h2 class="tagcard__title"><%= tag.name %></h2>
-                    <div class="applydiv">
-                        <span>
-                            <span class="tagtext"><p class="tagcard__apply"><a href="/tags/<%= tag.id %>">View</a></p></span>
-                            <span class="tagicon">
-                                <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: -23px;margin-top: 7px;" width="16" height="22" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                                </svg></span>
-                        </span>
-                        <span>
-                            <span class="tagtext"><p class="tagcard__apply"><a href="/tags/<%= tag.id %>/edit">Edit</a></p></span>
-                            <span class="tagicon">
-                                <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: -23px;margin-top: 7px;" width="16" height="22" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                                </svg></span>
-                        </span>
-                    </div>
+        <a href="/tags/<%= tag.id %>" id="tagcardlink">
+            <div class="card">
+                <form method="POST" action="/tags/<%= tag.id %>?_method=DELETE">
+                    <button type="submit" id="tagclose">×</button>
+                </form>
+                <h3 class="tagtitle"><%= tag.name %></h3>
+                <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+                </div>
+                <div class="circle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle class="stroke" cx="60" cy="60" r="50"/>
+                </svg>
                 </div>
             </div>
-        </div>
-        <% if(m==5){m=0;} %>
+        </a>
     <% }) %> 
-
-    </div>
-
-</div>
+  </div>
 
 </div>
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>

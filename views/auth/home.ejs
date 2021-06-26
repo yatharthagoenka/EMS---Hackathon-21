@@ -1,84 +1,88 @@
-<div id="dialogcontainer">
+<div id="loginbg">
 
-    <div class="container" id="container">
-      <div class="form-container sign-up-container">
-        <form action="/" method="POST">
-          <h1>Create Account</h1>
-          <div class="sociallogin-container">
-            <a href="#" class="sociallogin"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="sociallogin"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="sociallogin"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <span>or register manually</span>
-          <input placeholder="Username" type="text" id="username" name="username"  class="validate" required />
-          <input placeholder="Password" type="password" id="password" name="password"class="validate" required />
-          <input placeholder="Mobile No" type="text" id="phone" name="phone"  class="validate" required />
-          <input placeholder="E-Mail" type="text" id="email" name="email"  class="validate" required />
-          <button>Sign Up</button>
-        </form>
-      </div>
-      <div class="form-container sign-in-container">
-        <form action="/login" method="POST">
-          <h1>Sign in</h1>
-          <div class="sociallogin-container">
-            <a href="#" class="sociallogin"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="sociallogin"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="sociallogin"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <span>or use your account</span>
-          <input placeholder="Username" id="xyz" name="username" class="validate" />
-          <input placeholder="Password" type="password" id="password" name="password" class="validate" />
-          <button>Sign In</button>
-        </form>
-      </div>
-      <div class="overlaylogin-container">
-        <div class="overlaylogin">
-          <div class="overlaylogin-panel overlaylogin-left">
-            <h1>Welcome Back!</h1>
-            <p id="logintext">To keep connected with us<br> please login with your personal info</p>
-            <button class="ghost" id="signIn">Sign In</button>
-          </div>
-          <div class="overlaylogin-panel overlaylogin-right">
-            <h1>Greetings!</h1>
-            <p>Enter your details and join us in our venture</p>
-            <button class="ghost" id="signUp">Sign Up</button>
-          </div>
+  <div id="dialogcontainer">
+
+      <div class="container" id="container">
+        <div class="form-container sign-up-container">
+          <form action="/" method="POST">
+            <h1>Create Account</h1>
+            <div class="sociallogin-container">
+              <a href="#" class="sociallogin"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="sociallogin"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="sociallogin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or register manually</span>
+            <input placeholder="Username" type="text" id="username" name="username"  class="validate" required />
+            <input placeholder="Password" type="password" id="password" name="password"class="validate" required />
+            <input placeholder="Mobile No" type="text" id="phone" name="phone"  class="validate" required />
+            <input placeholder="E-Mail" type="text" id="email" name="email"  class="validate" required />
+            <button>Sign Up</button>
+          </form>
         </div>
-      </div>
-    </div>
-
-</div>
-
-<div id="logindialog2">
-  <div class="form-structor">
-    <div class="signup">
-      <h2 class="form-title" id="signup">Sign up</h2>
-      <div class="form-holder">
-        <form action="/" method="POST">
-          <input placeholder="Username" type="text" id="username" name="username"  class="input" required />
-          <input placeholder="Password" type="password" id="password" name="password"class="input" required />
-          <input placeholder="Mobile No" type="text" id="phone" name="phone"  class="input" required />
-          <input placeholder="E-Mail" type="text" id="email" name="email"  class="input" required />
-        
-      </div>
-      <button class="submit-btn">Sign up</button></form>
-    </div>
-    <div class="login slide-up">
-      <div class="center">
-        <h2 class="form-title" id="login">Log in</h2>
-        <div class="form-holder">
+        <div class="form-container sign-in-container">
           <form action="/login" method="POST">
-            <input placeholder="Username" id="xyz" name="username" class="input validate" />
-            <input placeholder="Password" type="password" id="password" name="password" class="input validate" />
+            <h1>Sign in</h1>
+            <div class="sociallogin-container">
+              <a href="#" class="sociallogin"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="sociallogin"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="sociallogin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input placeholder="Username" id="xyz" name="username" class="validate" />
+            <input placeholder="Password" type="password" id="password" name="password" class="validate" />
+            <button>Sign In</button>
+          </form>
         </div>
-        <button type="submit" class="submit-btn">Log in</button></form>
+        <div class="overlaylogin-container">
+          <div class="overlaylogin">
+            <div class="overlaylogin-panel overlaylogin-left">
+              <h1>Welcome Back!</h1>
+              <p id="logintext">To keep connected with us<br> please login with your personal info</p>
+              <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlaylogin-panel overlaylogin-right">
+              <h1>Greetings!</h1>
+              <p>Enter your details and join us in our venture</p>
+              <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div id="logindialog2">
+    <div class="form-structor">
+      <div class="signup">
+        <h2 class="form-title" id="signup">Sign up</h2>
+        <div class="form-holder">
+          <form action="/" method="POST">
+            <input placeholder="Username" type="text" id="username" name="username"  class="input" required />
+            <input placeholder="Password" type="password" id="password" name="password"class="input" required />
+            <input placeholder="Mobile No" type="text" id="phone" name="phone"  class="input" required />
+            <input placeholder="E-Mail" type="text" id="email" name="email"  class="input" required />
+          
+        </div>
+        <button class="submit-btn">Sign up</button></form>
+      </div>
+      <div class="login slide-up">
+        <div class="center">
+          <h2 class="form-title" id="login">Log in</h2>
+          <div class="form-holder">
+            <form action="/login" method="POST">
+              <input placeholder="Username" id="xyz" name="username" class="input validate" />
+              <input placeholder="Password" type="password" id="password" name="password" class="input validate" />
+          </div>
+          <button type="submit" class="submit-btn">Log in</button></form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<div id="particle-js">
+  <div id="particle-js">
+
+  </div>
 
 </div>
 

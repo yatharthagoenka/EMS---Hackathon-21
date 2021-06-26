@@ -1,6 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+#loginbg{
+	overflow: hidden !important;
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 103%;
+	background-image: url('/resources/loginbg.gif');
+	background-size: cover;
+	top: -3%;
+}
+
 #dialogcontainer{
     display: flex;
     justify-content: center;
@@ -224,18 +235,5 @@ p {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
-}
-
-
-/* particle bg */
-
-#particles-js {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: -1000;
-	
 }
 

@@ -1,9 +1,81 @@
-#indexmid{ 
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+
+.indexinfo{
+    background-image: url('/resources/indexmidbg.gif');
+    background-size: cover;
+    overflow: hidden !important;
     position: absolute;
-    color: white;
-    font-size: 5rem;
-    top: 100vh;
-    background-color: beige;
+    top: 109vh;
     width: 100%;
-    height: 100vh;
-}
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(32, 32, 32);
+    padding-top: 150px;
+    padding-bottom: 20px;
+} 
+
+.carouselcontainer input[type=radio] {
+    display: none;
+  }
+  
+  .carouselcard {
+    position: absolute;
+    width: 260px;
+    height: 560px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .carouselcontainer {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carouselcards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .carouselcards img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  #item-1:checked ~ .carouselcards #song-3, #item-2:checked ~ .carouselcards #song-1, #item-3:checked ~ .carouselcards #song-2 {
+    transform: translatex(-40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .carouselcards #song-2, #item-2:checked ~ .carouselcards #song-3, #item-3:checked ~ .carouselcards #song-1 {
+    transform: translatex(40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .carouselcards #song-1, #item-2:checked ~ .carouselcards #song-2, #item-3:checked ~ .carouselcards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+  #item-1:checked ~ .carouselcards #song-1 img, #item-2:checked ~ .carouselcards #song-2 img, #item-3:checked ~ .carouselcards #song-3 img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+  

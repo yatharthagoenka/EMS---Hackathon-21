@@ -1,5 +1,17 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+#tagsbg {
+    width: 100%;
+    height: 200vh;
+    background-color: #100e17;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -4%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+}
+
 .tagshowhead{
     width: 1200px;
     margin-left: 12%;    
@@ -38,56 +50,53 @@
     align-items: center;
 }
 
+.tagshowhead{
+    margin-top: 7%;
+}
+
 </style>
 
-<a href="/tags" style="margin-left: 45px;"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#77c9b5" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
-  </svg></a>
+<div id="tagsbg">
 
-
-<div class="tagshowhead">
-    <br>
-    <div class="tagbarbutton">
-        <div class="tagname"><h2><span>  <%= tag.name %>  </span></h2></div>
+    <div class="tagshowhead">
+        <br>
+        <div class="tagbarbutton">
+            <div class="tagname"><h2><span>  <%= tag.name %>  </span></h2></div>
             <br>
             <div class="headbuttons">
-                <div><a href="/tags/<%= tag.id %>/edit"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-filter-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM3.5 5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zM5 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
-                </svg></a></div>
-                <div style="margin-left: 40px;"><%- include('../partials/deleteForm',{url: `/tags/${tag.id}`}) %> </div>
+                <div><a href="/tags" style="margin-right: 40px;"><i class="fas fa-arrow-circle-left" style="color: #edff94;font-size: 2.5rem;"></i></a></div>  
+                <div><a href="/tags/<%= tag.id %>/edit"><i class="fas fa-exclamation-circle" style="color: #90f5b5;font-size: 2.5rem;"></i></a></div>
             </div>
+            
         </div>
     </div>
-</div>
-<br><br>
-
-<div style="margin-left: 100px; padding-top: 30px;">
-
-<% if(eventsByTag.length>0) { %> 
-    <h2>Events by Tag</h2>
-    
     <br><br>
 
-    <div style="width: 1500px;">
-        <div class="flexcontainer" style="margin-left: 80px;">
+    <div style="margin-left: 100px; padding-top: 100px;">
+
+        <% if(eventsByTag.length>0) { %> 
+            <h2 style="font-size: 2rem;font-weight: 350;color: rgb(233, 233, 233);font-family: 'Poppins',sans-serif;">Events by Tag</h2>
+            <br><br>
+            <div id="postcardcontainer">
             <% eventsByTag.forEach(event => { %> 
-                <a href="/events/<%= event.id %>" class="card" style="width: 250px; height: 370px;">
-                    <img src="<%= event.coverImagePath %>" class="card__image" alt="" style="width: 250px; height: 340px;"/>
-                    <div class="card__overlay">
-                    <div class="card__header">
-                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                        <img class="card__thumb" src="https://i.ibb.co/KbcPFHv/synapse-logo.png" alt="" />
-                        <div class="card__header-text">
-                        <h3 class="card__title"><%= event.title %></h3>            
-                        <span class="card__status"><%= event.username %></span>
+                    <a href="/events/<%= event.id %>" class="postcard" style="width: 250px; height: 370px;">
+                        <img src="<%= event.coverImagePath %>" class="postcard__image" alt="" />
+                        <div class="postcard__overlay">
+                        <div class="postcard__header">  
+                            <svg class="postcard__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                            <img class="postcard__thumb" src="https://i.ibb.co/KbcPFHv/synapse-logo.png" alt="" />        
+                            <div class="postcard__header-text">
+                            <h3 class="postcard__title"><%= event.title %></h3>            
+                            <span class="postcard__status"><%= event.username %></span>
+                            </div>
                         </div>
-                    </div>
-                    <p class="card__description"><%= event.description %></p>
-                    </div>
-                </a> 
+                        <p class="postcard__description"><%= event.description %></p>
+                        </div>
+                    </a> 
             <% }) %> 
         </div>
+        <% } %> 
+
     </div>
-<% } %> 
 
 </div>
