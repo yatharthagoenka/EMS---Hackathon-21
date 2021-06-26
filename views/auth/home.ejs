@@ -1,23 +1,123 @@
-<h1>USER AUTH PAGE</h1>
-<!-- <ul>
-  <li> <a href="/login">Login</a> </li>
-  <li> <a href="/register">Register</a> </li>
-</ul> -->
+<div id="dialogcontainer">
 
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="/" method="POST">
+          <h1>Create Account</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or register manually</span>
+          <input placeholder="Username" type="text" id="username" name="username"  class="validate" required />
+          <input placeholder="Password" type="password" id="password" name="password"class="validate" required />
+          <input placeholder="Mobile No" type="text" id="phone" name="phone"  class="validate" required />
+          <input placeholder="E-Mail" type="text" id="email" name="email"  class="validate" required />
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="/login" method="POST">
+          <h1>Sign in</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your account</span>
+          <input placeholder="Username" id="xyz" name="username" class="validate" />
+          <input placeholder="Password" type="password" id="password" name="password" class="validate" />
+          <button>Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p id="logintext">To keep connected with us<br> please login with your personal info</p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Greetings!</h1>
+            <p>Enter your details and join us in our venture</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h1 style="margin-bottom: 20px;">Sign Up</h1> 
-<form action="/" method="POST">
-    <div class="input-field"><input placeholder="Username" type="text" id="username" name="username"  class="validate" required></div>
-    <div class="input-field"><input placeholder="Password" type="password" id="password" name="password"class="validate" required></div>
-    <div class="input-field"><input placeholder="Mobile No" type="text" id="phone" name="phone"  class="validate" required></div>
-    <div class="input-field"><input placeholder="E-Mail" type="text" id="email" name="email"  class="validate" required></div>
-    <button class="second-button">Join</button>
-</form>
-<br><br><br>
+</div>
 
-<h1 id="signinhead" style="color: white;margin-bottom: 30px;margin-top: 7px;">Log In</h1>
-<form action="/login" method="POST">
-    <div class="input-field" style="margin-bottom: 5px;"><input placeholder="Username" id="xyz" name="username" class="validate"></div>
-    <div class="input-field" style="margin-bottom: 5px;"><input placeholder="Password" type="password" id="password" name="password" class="validate"></div>
-    <button class="second-button" style="margin-bottom: 7px;">Enter</button>
-  </form>
+<div id="logindialog2">
+  <div class="form-structor">
+    <div class="signup">
+      <h2 class="form-title" id="signup">Sign up</h2>
+      <div class="form-holder">
+        <form action="/" method="POST">
+          <input placeholder="Username" type="text" id="username" name="username"  class="input" required />
+          <input placeholder="Password" type="password" id="password" name="password"class="input" required />
+          <input placeholder="Mobile No" type="text" id="phone" name="phone"  class="input" required />
+          <input placeholder="E-Mail" type="text" id="email" name="email"  class="input" required />
+        
+      </div>
+      <button class="submit-btn">Sign up</button></form>
+    </div>
+    <div class="login slide-up">
+      <div class="center">
+        <h2 class="form-title" id="login">Log in</h2>
+        <div class="form-holder">
+          <form action="/login" method="POST">
+            <input placeholder="Username" id="xyz" name="username" class="input validate" />
+            <input placeholder="Password" type="password" id="password" name="password" class="input validate" />
+        </div>
+        <button type="submit" class="submit-btn">Log in</button></form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+// for form 2
+console.clear();
+
+const loginBtn = document.getElementById('login');
+const signupBtn = document.getElementById('signup');
+
+loginBtn.addEventListener('click', (e) => {
+	let parent = e.target.parentNode.parentNode;
+	Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+		if(element !== "slide-up") {
+			parent.classList.add('slide-up')
+		}else{
+			signupBtn.parentNode.classList.add('slide-up')
+			parent.classList.remove('slide-up')
+		}
+	});
+});
+
+signupBtn.addEventListener('click', (e) => {
+	let parent = e.target.parentNode;
+	Array.from(e.target.parentNode.classList).find((element) => {
+		if(element !== "slide-up") {
+			parent.classList.add('slide-up')
+		}else{
+			loginBtn.parentNode.parentNode.classList.add('slide-up')
+			parent.classList.remove('slide-up')
+		}
+	});
+});
+</script>
