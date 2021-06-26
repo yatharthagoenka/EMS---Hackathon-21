@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.revcard{
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 21%;
+    height: 100%;
+    color: black;
+    opacity: 0.99;
+    margin-left: 50%;
+    margin-top: 10%;
+}
+
+.revinp{
+    background: none;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: grey;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-bottom: 24px;
+}
+
+.reviewbg{
+    width: 100%;
+    height: 105vh;
+    margin-top: -4%;
+    /* background-color: rgb(46, 46, 46); */
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/f732bb34071796.56c334c09720d.gif");
+    background-size: cover;
+}
+
+.revindexcards{
+    height: 360px;
+    overflow-y: scroll;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#commenthead{
+    font-family: 'Righteous', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 4.3rem;
+}
+
+#commentfonts{
+    background-color: rgba(78, 78, 78, 0.377);
+    padding: 40px;
+    margin-top: 60px;
+    width: fit-content;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+#commentfonts p{
+    font-family: 'Poppins',sans-serif;
+    font-size: 1.2rem;
+    margin-left: -2px;
+}
+
+#commentfonts a{
+    font-family: 'Poppins',sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+  
+#commentfonts a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -7px;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+
+#commentfonts a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
