@@ -4,10 +4,10 @@
       <div class="form-container sign-up-container">
         <form action="/" method="POST">
           <h1>Create Account</h1>
-          <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <div class="sociallogin-container">
+            <a href="#" class="sociallogin"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="sociallogin"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="sociallogin"><i class="fab fa-linkedin-in"></i></a>
           </div>
           <span>or register manually</span>
           <input placeholder="Username" type="text" id="username" name="username"  class="validate" required />
@@ -20,10 +20,10 @@
       <div class="form-container sign-in-container">
         <form action="/login" method="POST">
           <h1>Sign in</h1>
-          <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <div class="sociallogin-container">
+            <a href="#" class="sociallogin"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="sociallogin"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="sociallogin"><i class="fab fa-linkedin-in"></i></a>
           </div>
           <span>or use your account</span>
           <input placeholder="Username" id="xyz" name="username" class="validate" />
@@ -31,14 +31,14 @@
           <button>Sign In</button>
         </form>
       </div>
-      <div class="overlay-container">
-        <div class="overlay">
-          <div class="overlay-panel overlay-left">
+      <div class="overlaylogin-container">
+        <div class="overlaylogin">
+          <div class="overlaylogin-panel overlaylogin-left">
             <h1>Welcome Back!</h1>
             <p id="logintext">To keep connected with us<br> please login with your personal info</p>
             <button class="ghost" id="signIn">Sign In</button>
           </div>
-          <div class="overlay-panel overlay-right">
+          <div class="overlaylogin-panel overlaylogin-right">
             <h1>Greetings!</h1>
             <p>Enter your details and join us in our venture</p>
             <button class="ghost" id="signUp">Sign Up</button>
@@ -76,6 +76,12 @@
     </div>
   </div>
 </div>
+
+
+<div id="particle-js">
+
+</div>
+
 
 <script>
 
@@ -120,4 +126,5 @@ signupBtn.addEventListener('click', (e) => {
 		}
 	});
 });
+
 </script>

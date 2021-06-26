@@ -1,0 +1,9 @@
+#indexmid{ 
+    position: absolute;
+    color: white;
+    font-size: 5rem;
+    top: 100vh;
+    background-color: beige;
+    width: 100%;
+    height: 100vh;
+}

@@ -18,6 +18,7 @@ const tagRouter = require('./routes/tags')
 const eventRouter = require('./routes/events')
 const reviewRouter = require('./routes/reviews') 
 
+
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
@@ -104,6 +105,7 @@ app.get("/logout",(req,res)=>{
     req.logout();
     res.redirect("/");
 });
+
 
 app.use('/index', indexRouter)
 app.use('/tags', tagRouter)
