@@ -1,7 +1,10 @@
 # EMS---Hackathon-21
 
-> A user-organised event management system that lets you log in and manage the upcoming events, categorising them with corresponding tags.
+```sh
+Site Deploy: https://ews-hackathon.herokuapp.com/
+```
 
+> A user-organised event management system that lets you log in and manage the upcoming events, categorising them with corresponding tags.
 
 ### Front End: 
 HTML, CSS, JS
