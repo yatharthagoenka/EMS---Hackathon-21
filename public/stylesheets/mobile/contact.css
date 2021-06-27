@@ -1,0 +1,46 @@
+.contactbody {
+    margin-top: -15% !important;
+}
+
+.contactbody div:before {
+    width: 320px;
+    height: 320px;
+    left: calc(50% - 120px);
+    top: calc(50% - 25px);
+}
+
+.contactbody div h1 {
+    font-size: 4rem;
+    margin-top: 30vh !important;
+    margin-left: 20% !important;
+}
+
+.contactbody div h1:after {
+    display: none;
+}
+.contactbody div h1:before {
+    width: 80.5px;
+    margin-right: -30px !important;
+    
+  }
+
+#contacticons{
+    margin-top: 17vh;
+    justify-content: center;
+    width: 200px;
+    margin-left: 15vh;
+}
+
+#contacticonpair{
+    margin-bottom: 50px;
+}
+
+.profileicon img{
+    width: 60px;
+    height: 60px;
+    transition: 0.5s;
+}
+
+#linkedinicon{
+    margin-right: 0px !important;
+}

@@ -1,0 +1,55 @@
+#tagsbg{
+    width: 105% !important;
+    padding-left: 18%;
+    margin-top: -15% !important;
+}
+#tagindextop{
+    width: 80%;
+    margin-left: 9%;
+}
+#taghead{
+    font-size: 2.3rem;
+}
+#tagindextop p{
+    font-size: 0.9rem;
+}
+#tagindextop a{
+    font-size: 1rem;
+}
+
+.tagscontainer{
+    margin-top: 24%;
+}
+.card{
+    margin-top: -35%;
+}
+
+/* NEW/EDIT TAG LAYOUT */
+
+.tageditmain h2{
+    font-size: 1.5rem !important;
+    margin-left: 45px !important;
+}
+
+.tageditmain{
+    width: 84%;
+    margin-right: 20px;
+    height: 270px !important;
+    margin-top: 70% !important;
+}
+
+/* SHOW TAG LAYOUT */
+
+.tagshowhead{
+    width: 700px !important;
+    margin-left: -60% !important;
+    text-align: left;
+    padding-top: 50%;
+}
+
+.tagname h2{
+    width: 100px;
+    color: white !important;
+    font-size: 2rem;
+}
+
