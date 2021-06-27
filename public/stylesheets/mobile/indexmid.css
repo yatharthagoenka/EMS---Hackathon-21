@@ -1,0 +1,31 @@
+.carouselcard{
+    width: 150px;
+    height: 260px;
+}
+
+.indexinfo{
+    top: 90vh;
+    padding-left: 5px;
+}
+
+.carouselcontainer{
+    margin-left: 130px !important;
+    width: 600px;
+}
+
+.indexanim{
+    transform: scale(0.5) !important;
+    margin-top: 10% !important;
+    margin-left: 43% !important;
+}
+
+#mobcategory{
+    transform: scale(0.5) !important;
+    margin-top: 50%;
+    margin-left: -90%;
+}
+
+#mobevent{
+    transform: scale(0.5) !important;
+    margin-left: -85%;
+}
