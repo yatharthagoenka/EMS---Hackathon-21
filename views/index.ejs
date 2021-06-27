@@ -37,7 +37,7 @@
 
 
 <div class="indexinfo">
-    <div class="carouselcontainer" style="margin-left: -50px;" >
+    <div class="carouselcontainer" style="margin-left: -50px; margin-top: -50px;" >
         <input type="radio" name="slider" id="item-1" checked>
         <input type="radio" name="slider" id="item-2">
         <input type="radio" name="slider" id="item-3">
@@ -57,7 +57,7 @@
     <%- include('hometext') %>
     <div>
         <div id="userind"  style="visibility: visible;font-family: 'Poppins',sans-serif;font-size: 3.3rem;font-weight: 390;margin-left: 20%;margin-top: 21%;"> <p><%= username %></p> </div>
-        <div id="hood" style="visibility: hidden;margin-top: -35%;"><%- include('hoodtext') %></div>
+        <div id="hood" style="visibility: hidden;margin-top: -35%;"><%- include('categorytext') %></div>
         <div id="profile" style="visibility: hidden;"><%- include('eventtext') %></div>
     </div>
     
@@ -65,7 +65,43 @@
 
 
 <div id="indextimeline">
+    <!-- <div style="margin-top: 200vh;">
+    
+    </div> -->
 
+    <div class="timelinecontainer">
 
+        <div class="tagrightcontainer" data-aos="slide-right" data-aos-duration="1000" data-aos-offset="-40">
+            <img src="https://images.unsplash.com/photo-1473172707857-f9e276582ab6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1536420095395-a592ce76a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80" alt="">
+        </div>
+        <div class="rightbox">
+          <div class="rb-container">
+            <ul class="rb">
+
+                <% events.forEach(event => { %> 
+                    <li class="rb-item" ng-repeat="itembx">
+                        <div data-aos="slide-left" data-aos-duration="1000" data-offset="-800">
+                            <div class="timestamp">
+                                <%= event.timeline %>
+                            </div>
+                            <div class="item-title"><%= event.title %></div>
+                        </div>
+                      </li>
+                <% }) %> 
+      
+            </ul>
+      
+          </div>
+        </div>
+      </div>
     
 </div>
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>

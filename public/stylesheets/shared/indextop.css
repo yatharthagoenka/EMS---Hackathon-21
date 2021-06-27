@@ -3,10 +3,10 @@
 #indextop{
     overflow: hidden !important;
     position: absolute;
-    margin-top: -4%;
+    margin-top: -5%;
     z-index: -1;
     width: 100%;
-    height: 110vh;
+    height: 105% !important;
     background-color: antiquewhite;
 }
 
@@ -15,7 +15,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  min-height: 110vh;
   padding: 100px;
   display: flex;
   justify-content: space-between;
@@ -50,7 +50,7 @@
 {
   position: relative;
   z-index: 10;
-  margin-top: -100px;
+  margin-top: 20px;
 }
 
 .text h2
@@ -98,7 +98,7 @@
 .social{
   position: absolute;
   z-index: 10;
-  top: 380px;
+  top: 500px;
   bottom: 10px;
   display: flex;
   justify-content: center;

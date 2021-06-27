@@ -1,51 +1,51 @@
-<div class="postform">
-    
-    <input style="width: 200px;height: 300px;" type="file" name="cover" class="filepond">
 
-    <div style="margin-left: 20px;">
-        <h2 class="posthead"><%= posthead %></h2>
 
-        <div>
-            <input type="text" name="username" value="<%= event.username %>" placeholder="Username : Autofill" readonly>
-        </div><br>
+    <div class="postform">
+        
+        <input style="width: 200px;height: 300px;" type="file" name="cover" class="filepond">
 
-        <div>
-            <input type="text" name="title" placeholder="Title" value="<%= event.title %>" required>
-        </div>
-
-        <div style="display:flex; flex-direction:row; justify-content:space-between;margin-left: 10px;">
+        <div style="margin-left: 20px;">
+            <h2 class="posthead"><%= posthead %></h2>
 
             <div>
-                <select name="tag" required>
-                <% tags.forEach(tag => { %>
-                    <% if(tag.id===event.tag){ %>
-                        <option selected label="<%= tag.name %>" value="<%= tag.id %>">
-                    <% } else { %>
-                        <option label="<%= tag.name %>" value="<%= tag.id %>"> 
-                    <% } %> 
-                <% }) %> 
-                </select>
+                <input type="text" name="username" value="<%= event.username %>" placeholder="Username : Autofill" readonly>
+            </div><br>
+
+            <div>
+                <input type="text" name="title" placeholder="Title" value="<%= event.title %>" required>
             </div>
 
-            <div style="margin-right:15px;">
-                <input type="date" name="timeline" id="postdate" value="<%= event.timeline == null ? '' : event.timeline.toISOString().split('T')[0] %>">
-            </div>
-        </div>
-        <br>
-        <div>
-            <textarea placeholder="Description" name="description" required><%= event.description %></textarea>
-        </div>
+            <div style="display:flex; flex-direction:row; justify-content:space-between;margin-left: 10px;">
 
-        <div style="display: flex; flex-direction: row;margin-left: 20px;margin-top: 25px;">
-            <div style="margin-top: 6px;"><a href="/events"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#ff4533" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-            </svg></a></div>
-            <!-- <div style="margin-left: 55px;"><button class="datebutton" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#59e372" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-            </svg></button></div> -->
-            <button class="postb" type="submit" style="margin-left: 25px;"><span>Submit</span></button>
+                <div>
+                    <select name="tag" required>
+                    <% tags.forEach(tag => { %>
+                        <% if(tag.id===event.tag){ %>
+                            <option selected label="<%= tag.name %>" value="<%= tag.id %>">
+                        <% } else { %>
+                            <option label="<%= tag.name %>" value="<%= tag.id %>"> 
+                        <% } %> 
+                    <% }) %> 
+                    </select>
+                </div>
+
+                <div style="margin-right:15px;">
+                    <input type="date" name="timeline" id="postdate" value="<%= event.timeline == null ? '' : event.timeline.toISOString().split('T')[0] %>">
+                </div>
+            </div>
+            <br>
+            <div>
+                <textarea placeholder="Description" name="description" required><%= event.description %></textarea>
+            </div>
+            <button type="submit">Submit</button>
+
+            <div style="display: flex; flex-direction: row;margin-left: 20px;margin-top: 25px;">
+                <div style="margin-top: 6px;"><a href="/events"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#ff4533" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                </svg></a></div>
+                <button class="postb" type="submit" style="margin-left: 25px;"><span>Submit</span></button>
+            </div>
+
         </div>
 
     </div>
-
-</div>

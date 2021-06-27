@@ -6,7 +6,7 @@ const User =  require("../models/user")
 router.get('/',isLoggedIn, async(req, res) => {
     let events
     try{
-        events = await Event.find().sort({timeline:'desc'}).limit(4).exec()
+        events = await Event.find().sort({timeline:'desc'}).limit(5).exec()
     }catch{
         events = []
     }

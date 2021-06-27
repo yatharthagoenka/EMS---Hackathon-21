@@ -1,32 +1,29 @@
-#postcardcontainer{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-}
+
   
   .postcard {
+    padding: 0px;
     margin-right: 120px;
     width: 270px;
     height: 390px;
     position: relative;
     display: block;
     /* height: 100%;   */
-    border-radius: calc(40 * 1px);
+    border-radius: 40px;
     overflow: hidden;
     text-decoration: none;
     transition: 0.3s;
   }
   
-  .postcard__image {      
-    width: 270px;
+  .postcard__image {  
+    margin-left: -50%;    
+    width: 340px;
     height: 390px;
+    margin-top: -20%;
   }
   
   .postcard__overlay {
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     left: 0;
     right: 0;
     z-index: 1;      

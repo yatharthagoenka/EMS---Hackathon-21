@@ -2,11 +2,14 @@
 
 <!-- The enctype states that the form is of multipart nature and could contain files (images in this case) : enctype="multipart/form-data"-->
 <!-- this is no longer included bcs we are using filepond that is sending image as an encoded string  -->
-<div class="postouter">
-    <div class="postcard">
-        <form action="/posts/<%= post.id %>?_method=PUT" method="POST">
-            <%- include('_form_field',{posthead:"Edit Post"}) %> 
-        </form>
+<div id="tagsbg" style="height: 110vh;margin-top: -4%;">
+    <a href="/events/<%= event.id %>" style="margin-left: 80px;margin-top: 10%;"><i class="fas fa-arrow-circle-left" style="color: #edff94;font-size: 2.5rem;"></i></a>
+    <div class="postouter">
+        <div class="postcard">
+            <form action="/events/<%= event.id %>?_method=PUT" method="POST">
+                <%- include('_form_field',{posthead:"Edit Event"}) %> 
+            </form>
+        </div>
     </div>
 </div>
 
