@@ -1,5 +1,9 @@
 # EMS---Hackathon-21
 
+```sh
+Site Link: https://ews-hackathon.herokuapp.com/
+```
+
 > A user-organised event management system that lets you log in and manage the upcoming events, categorising them with corresponding tags.
 
 <<<<<<< HEAD
