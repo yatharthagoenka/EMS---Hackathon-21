@@ -1,0 +1,29 @@
+.time{
+    margin-top: 30px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+.timeouter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.date{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.datebutton{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}

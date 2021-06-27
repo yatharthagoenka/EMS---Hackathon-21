@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#tagsbg {
+    width: 100%;
+    height: 200vh;
+    background-color: #100e17;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -6%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+}
+
+  /* Tags heading styles */
+
+#tagindextop{
+    margin-top: 11%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#taghead{
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+#tagindextop p{
+    font-family: 'Poppins',sans-serif;
+    font-size: 1.2rem;
+    margin-left: -2px;
+}
+
+#tagindextop a{
+    font-family: 'Poppins',sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+#tagindextop a {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #tagindextop a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -7px;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+  }
+  
+  #tagindextop a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+/* Styling the tag cards below */
+
+.tagscontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    height: 300px;
+    width: 90%;
+    top: 60px;
+    padding-left: 60px;
+    padding-right: 40px;
+}
+  
+  .card {
+    display: flex;
+    height: 350px;
+    width: 250px;
+    background-color: #17141d !important;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+  
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  .tagtitle {
+    color: white;
+    font-weight: 300;
+    position: relative;
+    text-decoration: none;
+    left: 15px;
+    top: 22px;
+  }
+  
+  .bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+  }
+  
+  .emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0,154,217);
+    background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+    transition: 0.6s ease-out;
+  }
+  
+  .card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+  }
+  
+  .stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+  }
+  
+  svg {
+    fill: #17141d;
+    stroke-width: 2px;
+  }
+  
+  .card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+
+#tagclose{
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.3rem;
+}
+
+#tagcardlink{
+    text-decoration: none;
+}

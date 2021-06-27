@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+
+.timelinecontainer {
+    overflow-x: hidden !important;
+  background: #232931;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 193.5vh;
+  box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.rightbox {
+  padding: 0em 34rem 0em 0em;
+  height: 100%;
+  width: 70%;
+  margin-left: -10%;
+}
+
+.rb-container {
+  font-family: "PT Sans", sans-serif;
+  width: 50%;
+  font-size: 2rem;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+
+.rb-container ul.rb {
+  margin: 2.5em 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.rb-container ul.rb li {
+  list-style: none;
+  margin: auto;
+  margin-left: 10em;
+  min-height: 50px;
+  border-left: 1px dashed #fff;
+  padding: 0 0 50px 30px;
+  position: relative;
+}
+
+.rb-container ul.rb li:last-child {
+  border-left: 0;
+}
+
+.rb-container ul.rb li::before {
+  position: absolute;
+  left: -38px;
+  top: -5px;
+  content: " ";
+  border: 8px solid rgba(255, 255, 255, 1);
+  border-radius: 500%;
+  background: #50d890;
+  height: 50px;
+  width: 50px;
+  transition: all 500ms ease-in-out;
+}
+
+.rb-container ul.rb li:hover::before {
+  border-color: #232931;
+  transition: all 1000ms ease-in-out;
+}
+
+ul.rb li .timestamp {
+  color: #50d890;
+  position: relative;
+  width: 100px;
+  font-size: 12px;
+}
+
+.item-title {
+    width: 500px;
+  color: #fff;
+}
+
+.container-3 {
+  width: 5em;
+  vertical-align: right;
+  white-space: nowrap;
+  position: absolute;
+}
+
+
+
+.container-3 .icon {
+  margin: 1.3em 3em 0 31.5em;
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
+input::placeholder {
+  padding: 5em 5em 1em 1em;
+  color: #50d890;
+}
+
+
+.tagrightcontainer img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin:center;
+    transform:perspective(800px) rotateY(25deg);
+    transition:0.5s;
+  }
+  .tagrightcontainer {
+    margin-top: 50px;
+    margin-left:10%;
+    width: 450px;
+    height: 550px;
+    display:flex;
+    justify-content:center;
+    /* margin-top: 280vh; */
+    gap:20px;
+    bottom:10px;
+    right: 30px;
+    margin-right: -5%;
+  }
+  
+  .tagrightcontainer:hover img {
+    opacity:0.3;
+  }
+  .tagrightcontainer img:hover {
+    transform:perspective(800px)       rotateY(0deg);
+    opacity:1;
+  }

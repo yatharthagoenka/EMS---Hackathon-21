@@ -1,0 +1,15 @@
+.mainhead{
+    z-index: 10000;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    
+}
+
+.header-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1300px;
+}

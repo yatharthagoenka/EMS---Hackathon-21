@@ -2,8 +2,11 @@
 
 > A user-organised event management system that lets you log in and manage the upcoming events, categorising them with corresponding tags.
 
+<<<<<<< HEAD
 ## Master branch only contains the backend structure. Switch to frontend for full access.
 
+=======
+>>>>>>> frontend
 
 ### Front End: 
 HTML, CSS, JS

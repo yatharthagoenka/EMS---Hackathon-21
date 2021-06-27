@@ -1,0 +1,33 @@
+<div class="contactbody">
+
+    <input type="checkbox" id="contactcheck" onclick="check()"/>
+    <div>
+    <h1>REACH</h1>
+    </div>
+
+
+</div>
+
+<div id="contacticons">
+    <div>
+        <a class="profileicon" href="https://www.github.com/yatharthagoenka/" target="_blank"><img src="https://i.ibb.co/mD4Qbw1/giticon.png" style="margin-right: 40px;"></a>
+        <a class="profileicon" href="https://www.linkedin.com/in/yathartha-goenka-4b62b1200/" target="_blank"><img src="https://i.ibb.co/NsxV9L5/linkedinicon.png" style="margin-right: 40px;"></a>
+    </div> 
+    <div>
+        <a class="profileicon" href="https://www.instagram.com/yatharthagoenka/" target="_blank"><img src="https://i.ibb.co/nD253rJ/instaicon.png" style="margin-right: 40px;"></a>
+        <a class="profileicon" href="https://twitter.com/GoenkaYathartha" target="_blank"><img src="https://i.ibb.co/1b17Pqy/twitter.png"></a>
+    </div> 
+</div>  
+
+<script>
+    function check(){
+        var checkBox = document.getElementById("contactcheck");
+        if(checkBox.checked==true){
+            document.getElementById("contacticons").style.opacity="1";
+        }
+        else{
+            document.getElementById("contacticons").style.opacity="0";
+        }
+    }
+    
+</script>

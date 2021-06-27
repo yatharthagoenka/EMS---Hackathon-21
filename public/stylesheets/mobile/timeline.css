@@ -1,0 +1,11 @@
+.tagrightcontainer{
+    display: none;
+}
+
+#indextimeline{
+    margin-top: -140px !important;
+}
+
+.rightbox{
+    margin-left: -50%;
+}
