@@ -40,3 +40,24 @@
   .carousel-caption:hover{
     opacity:0.3;
   }
+
+@media screen and (max-width: 800px) {
+    .carousel-item {
+        width: 700px;
+    }
+    
+    #eventcontainer{
+        margin-top: -12% !important;
+    }
+    
+    .carousel-item img {
+        margin-left: -16%;
+        width: 700px !important;
+        height: 100%;
+    }
+    
+    .carousel-indicators{
+        transform: scale(1.6);
+        margin-bottom: 40% !important;
+    }
+}

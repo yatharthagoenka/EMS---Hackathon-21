@@ -1,6 +1,6 @@
 
   
-  .postcard {
+  .eventscard {
     padding: 0px;
     margin-right: 120px;
     width: 270px;
@@ -15,8 +15,8 @@
   }
   
   .postcard__image {  
-    margin-left: -50%;    
-    width: 340px;
+    /* margin-left: -50%;     */
+    width: 270px;
     height: 390px;
     margin-top: -20%;
   }
@@ -33,12 +33,12 @@
     transition: .2s ease-in-out;
   }
 
-  .postcard:hover{
+  .eventscard:hover{
       transform: scale(1.04);
       transition: 0.3s;
   }
   
-  .postcard:hover .postcard__overlay {
+  .eventscard:hover .postcard__overlay {
     transform: translateY(0);
   }
   
@@ -68,7 +68,7 @@
     d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
   }       
   
-  .postcard:hover .postcard__header {
+  .eventscard:hover .postcard__header {
     transform: translateY(0);
   }
   

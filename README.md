@@ -8,10 +8,14 @@ Check out the site [here](https://ews-hackathon.herokuapp.com/)
 
 
 ### Front End: 
-HTML, CSS, JS
+- HTML
+- CSS
+- JS
 
 ### Back End:
-NodeJS, MongoDB, Express.
+- NodeJS
+- MongoDB
+- Express
 ```sh
 User-Auth done through Passport and Bcrypt.
 ```

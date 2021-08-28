@@ -1,0 +1,56 @@
+#organisebg {
+    margin-top: -15% !important;
+    padding-top: 5vh;
+    background-image: url('/resources/eventsbgmob.jpg');
+    height: 150vh;
+}
+
+.eventsearch{
+    transform: scale(0.9);
+}
+
+#eventnewbutton{
+    font-size: 2rem;
+    margin-left: -30px;
+}
+
+.eventsflex{
+    margin-left: 22vh !important;
+    width: 600px;
+}
+
+#eachevent{
+    margin-bottom: 40px;
+}
+
+
+/* NEW EVENT LAYOUT */
+
+.postcard{
+    margin-top: 40px;
+    margin-left: -10%;
+    width: 270px !important;
+    height: 76vh;
+}
+
+.filepond{
+    width: 140px;
+    height: 220px;
+}
+
+.posthead, .postform input[name="username"],.postb{
+    display: none;
+}
+
+.postform textarea[name="description"]{
+    height: 80px;
+}
+
+#postbutton{
+    margin-left: 40px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    padding: 10px;
+    border-width: 1px;
+}
+

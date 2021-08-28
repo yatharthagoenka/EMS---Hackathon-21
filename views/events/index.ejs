@@ -4,7 +4,7 @@
         <form action="/events" method="GET">
             <div ><input class="eventsearch" type="search" placeholder="Search events" name="title" value="<%= searchOptions.title %>" autofocus /></div>
         </form>
-        <a href="/events/new"><i class="fas fa-plus-circle" style="font-size: 3rem; color: white;margin-top: 5px;"></i></a>
+        <a href="/events/new"><i id="eventnewbutton" class="fas fa-plus-circle" style="font-size: 3rem; color: white;margin-top: 5px;"></i></a>
     </div>
     
     
@@ -13,7 +13,8 @@
         <div id="postcardcontainer">
             <div class="eventsflex" style="margin-left: 80px;">
                 <% events.forEach(event => { %> 
-                    <a href="/events/<%= event.id %>" class="postcard" style="width: 250px; height: 370px;">
+                    <div id="eachevent">
+                    <a href="/events/<%= event.id %>" class="eventscard" style="width: 250px; height: 370px;">
                         <img src="<%= event.coverImagePath %>" class="postcard__image" alt="" />
                         <div class="postcard__overlay">
                         <div class="postcard__header">  
@@ -27,6 +28,7 @@
                         <p class="postcard__description"><%= event.description %></p>
                         </div>
                     </a> 
+                </div>
             <% }) %> 
             </div>
         </div>
